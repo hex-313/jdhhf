@@ -1,0 +1,5 @@
+function dl-and-stream() {
+  url="$1"
+  aria2c "$url" &
+  mpv "$(basename "$url")"
+}
