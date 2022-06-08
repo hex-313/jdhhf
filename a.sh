@@ -1,5 +1,12 @@
-function dl-and-stream() {
-  aria2c "$1" &
-  file="$(ls -1t | head -n1)"
-  mpv "$file"
+# Downloader Function
+startDownload() {
+    clear
+    case $downloadType in
+        "Torrent")
+            aria2c --seed-time=0 --max-upload-limit=5K "$url"
+        ;;
+        "File")
+            aria2c -o "$name" "$url"
+        ;;
+    esac
 }
