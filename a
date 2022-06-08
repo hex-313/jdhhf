@@ -1,5 +1,5 @@
 function dl-and-stream() {
-  url="$1"
-  aria2c "$url" &
-  mpv "$(basename "$url")"
+  aria2c "$1" &
+  file="$(ls -1t | head -n1)"
+  mpv "$file"
 }
