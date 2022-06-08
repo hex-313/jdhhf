@@ -1,4 +1,3 @@
-# Downloader Function
 startDownload() {
     clear
     case $downloadType in
