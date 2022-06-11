@@ -1,0 +1,1 @@
+python3 .splrc/lrc.py "$1" 2> lrc.txt
