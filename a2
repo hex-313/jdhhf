@@ -1,4 +1,3 @@
 url="$1"
-extra-api "$url" > /dev/null &
-file="$(basename "$url")"
-echo "$file"
+extra-api -x 10 "$url" > /dev/null &
+echo $(python3 -c 'from urllib.parse import unquote_plus; print(unquote_plus(url).rsplit('/', 1)[-1])')
