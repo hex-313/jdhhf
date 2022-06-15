@@ -1,6 +1,5 @@
 import re
+import sys
 from urllib.parse import unquote_plus
 
-link = ''
-
-print ('%s' % unquote_plus(link).rsplit('/', 1)[-1])
+print ('%s' % unquote_plus(sys.argv[1]).rsplit('/', 1)[-1])
