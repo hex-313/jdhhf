@@ -1,3 +1,4 @@
-extra-api "$1" > /dev/null &
-  file="$(ls -1t | head -n1)"
-  echo "$file"
+url="$1"
+extra-api "$url" > /dev/null &
+file="$(basename "$url")"
+echo "$file"
