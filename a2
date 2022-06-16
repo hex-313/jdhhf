@@ -1,3 +1,1 @@
-url="$1"
-extra-api -x 10 "$url" > /dev/null &
-echo $(python3 -c 'from urllib.parse import unquote_plus; import sys; import re; print(unquote_plus(sys.argv[1]).rsplit('/', 1)[-1]' "$url")
+(extra-api -x 10 "$1") 2> /dev/null;echo $(python3 -c 'from urllib.parse import unquote_plus; import re; import sys; print(unquote_plus(sys.argv[1]).rsplit('/', 1)[-1])' "$1")
